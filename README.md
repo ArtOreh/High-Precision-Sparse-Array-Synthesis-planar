@@ -21,13 +21,13 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 
 | Elements ($N$) | Radius ($\nu$, in $\lambda$) | PSLL (dB) |
 | :--- | :--- | :--- |
-| **100** | $4.5$ | **-00.0 dB** Я|
+| **100** | $4.5$ | **-00.0 dB** |
 | **200** | $5.5$ | **-00.0 dB** |
-| **300** | $7.0$ | **-00.0 dB** |
+| **300** | $7.0$ | **-31.9 dB** |
 | **500** | $9.0$ | **-00.0 dB** |
 
-### Example: 500 Elements Pattern ($\nu = 9.0$)
+### Example: 300 Elements Pattern ($\nu = 7.0$)
 
 Here is the physical layout and the resulting pattern for the 500-element configuration:
 
-![Pattern for 500 elements](results/plots/interference_plot_500_9.0.png)
+![Pattern for 500 elements](results/plots/interference_plot_300_7.0.png)
