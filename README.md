@@ -15,16 +15,16 @@ This repository contains the results of an ongoing research on 2D sparse antenna
 
 ## Benchmarks and Results
 
-All results strictly maintain a physical minimum element spacing of $d_{min} = 0.5\lambda$. The aperture radius $\nu$ is measured in wavelengths ($\lambda$), and the main beam radius is fixed at $0.61 / \nu$ for all configurations.
+All results strictly maintain a physical minimum element spacing of $d_{min} = 0.5\lambda$. The aperture radius $\nu$ is measured in wavelengths ($\lambda$), and the main beam radius is fixed at $0.81 / \nu$ for all configurations.
 
 
 
 | Elements ($N$) | Radius ($\nu$, in $\lambda$) | PSLL (dB) |
 | :--- | :--- | :--- |
-| **100** | $4.5$ | **-25.2 dB** |
-| **200** | $5.5$ | **-26.7 dB** |
-| **300** | $7.0$ | **-26.7 dB** |
-| **500** | $9.0$ | **-26.5 dB** |
+| **100** | $4.5$ | **-00.0 dB** Я|
+| **200** | $5.5$ | **-00.0 dB** |
+| **300** | $7.0$ | **-00.0 dB** |
+| **500** | $9.0$ | **-00.0 dB** |
 
 ### Example: 500 Elements Pattern ($\nu = 9.0$)
 
