@@ -30,4 +30,4 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 
 Here is the physical layout and the resulting pattern for the 500-element configuration:
 
-![Pattern for 500 elements](results/plots/interference_plot_300_7.0.png)
+![Pattern for 500 elements](results/plots/interference_plot_n=300_r=7.0.png)
