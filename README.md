@@ -15,7 +15,8 @@ This repository contains the results of an ongoing research on 2D sparse antenna
 
 ## Benchmarks and Results
 
-All results strictly maintain a physical minimum element spacing of $d_{min} = 0.5\lambda$. The aperture radius $\nu$ is measured in wavelengths ($\lambda$), and the main beam radius is fixed at $0.81 / \nu$ for all configurations.
+All results strictly maintain a physical minimum element spacing of $d_{min} = 0.5\lambda$. The aperture radius $\nu$ is measured in wavelengths ($\lambda$), and the sidelobe exclusion zone radius is fixed at $0.81 / \nu$ for all configurations.
+
 
 
 
