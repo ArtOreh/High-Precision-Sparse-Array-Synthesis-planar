@@ -11,4 +11,4 @@ This repository contains the results of an ongoing research on 2D sparse antenna
 
 * `results/` — Contains the output data.
   * `coordinates/` — Text files with precise `[x, y]` coordinates.
-  * `plots/` — Array layouts and 2D pattern graphs (SLL maps).
+  * `plots/` — Array layouts and 2D pattern graphs. Note: Gray circles represent a safety zone of radius $d_{min}/2$ around each element to ensure physical spacing.
