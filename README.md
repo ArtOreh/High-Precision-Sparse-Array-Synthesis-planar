@@ -26,9 +26,10 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 | **200** | $5.5$ | **-31.1 dB** |
 | **300** | $7.0$ | **-31.9 dB** |
 | **500** | $9.0$ | **-33.1 dB** |
+| **1000** | $12.5$ | **-33.7 dB** |
 
-### Example: 500 Elements Pattern ($\nu = 9.0$)
+### Example: 1000 Elements Pattern ($\nu = 12.5$)
 
-Here is the physical layout and the resulting pattern for the 500-element configuration:
+Here is the physical layout and the resulting pattern for the 1000-element configuration:
 
-![Pattern for 500 elements](results/plots/interference_plot_n=500_r=9.0.png)
+![Pattern for 1000 elements](results/plots/interference_plot_n=1000_r=12.5.png)
