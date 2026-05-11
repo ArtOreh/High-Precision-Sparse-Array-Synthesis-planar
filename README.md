@@ -25,9 +25,9 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 | **100** | $4.5$ | **-28.6 dB** |
 | **200** | $5.5$ | **-33.2 dB** |
 | **300** | $7.0$ | **-33.8 dB** |
-| **500** | $9.0$ | **-33.1 dB**(!) |
-| **1000** | $12.5$ | **-33.7 dB**(!) |
-| **2000** | $18.0$ | **-34.0 dB**(!) |
+| **500** | $9.0$ | **-33.1 dB**(Pending data refresh ) |
+| **1000** | $12.5$ | **-33.7 dB**(Pending data refresh ) |
+| **2000** | $18.0$ | **-34.0 dB**(Pending data refresh ) |
 
 ### Example: 2000 Elements Pattern ($\nu = 18.0$)
 
