@@ -22,7 +22,7 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 
 | Elements ($N$) | Radius ($\nu$, in $\lambda$) | PSLL (dB) |
 | :--- | :--- | :--- |
-| **100** | $4.5$ | **-26.4 dB** |
+| **100** | $4.5$ | **-28.6 dB** |
 | **200** | $5.5$ | **-31.1 dB** |
 | **300** | $7.0$ | **-31.9 dB** |
 | **500** | $9.0$ | **-33.1 dB** |
