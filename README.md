@@ -29,8 +29,8 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 | **1000** | $12.5$ | **-37.0 dB** |
 | **2000** | $18.0$ | **-34.0 dB**(Pending data refresh ) |
 
-### Example: 2000 Elements Pattern ($\nu = 18.0$)
+### Example: 1000 Elements Pattern ($\nu = 12.5$)
 
-Here is the physical layout and the resulting pattern for the 2000-element configuration:
+Here is the physical layout and the resulting pattern for the 1000-element configuration:
 
-![Pattern for 2000 elements](results/plots/interference_plot_n=2000_r=18.0.png)
+![Pattern for 1000 elements](results/plots/interference_plot_n=1000_r=12.5.png)
