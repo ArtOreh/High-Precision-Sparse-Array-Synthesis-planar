@@ -41,6 +41,3 @@ By optimizing all element positions independently without geometric symmetry con
 The resulting physical layout and the radiation pattern for the verified 600-element configuration ($\nu = 60.0$) are illustrated below, showcasing a highly focused main beam with a sharp half-power beamwidth of approximately **$1.55^\circ$**:
 
 ![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
-
-
-![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
