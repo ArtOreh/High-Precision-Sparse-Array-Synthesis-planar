@@ -30,14 +30,17 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 
 ### State-of-the-Art Benchmarking (600 Elements, $\nu = 60.0$)
 
-To validate the optimization accuracy and structural synthesis capability of the proposed method, a benchmarking experiment was conducted using the 600-element ultra-wideband (UWB) sparse circular planar array configuration described by F. Liu et al. (2023) [DOI: 10.3390/electronics12234833]. 
+To evaluate the optimization accuracy and structural synthesis capability of the proposed framework, a benchmarking experiment was conducted against a 600-element ultra-wideband (UWB) sparse circular planar array described by F. Liu et al. (2023) [DOI: 10.3390/electronics12234833].
 
-The reference framework utilizes a Modified Differential Evolution Algorithm (MDEA) and relies on a rigid **15-fold rotational symmetry constraint** ($M=15$) to artificially restrict the search space dimension. Additionally, a structural discrepancy is observed between the reported text and the published graphics: while a peak sidelobe level (PSLL) of **$-20.12$ dB** is stated in the text, the corresponding radiation pattern cuts (Fig. 4b) clearly exhibit localized 2D sidelobe peaks reaching approximately **$-18.50$ dB**, indicating potential optimization stagnation or an insufficiently dense verification grid.
+The reference method utilizes a Modified Differential Evolution Algorithm (MDEA) under a rigid 15-fold rotational symmetry constraint ($M=15$) to artificially restrict the search space dimension. A discrepancy is observed between the reported text and the published graphics: while a peak sidelobe level (PSLL) of $-20.12$ dB is stated in the text, the corresponding radiation pattern cuts (Fig. 4b) exhibit localized 2D sidelobe peaks reaching approximately $-18.50$ dB. This indicates potential optimization stagnation or an insufficiently dense verification grid in the reference study.
 
-In contrast, the proposed hybrid 1D/2D Newton-Raphson optimization framework operates with **fully unconstrained, independent elements** (1200 degrees of freedom). Validated by an exhaustive, independent brute-force 2D scan grid, the proposed method successfully achieved a verified, solid 2D peak SLL of **$-21.60$ dB**. 
+In contrast, the proposed hybrid 2D Newton-Raphson optimization framework operates with fully unconstrained, independent elements, managing 1200 degrees of freedom. Validated by an exhaustive independent brute-force 2D scan grid, the proposed method achieved a verified 2D peak SLL of **$-21.60$ dB**.
 
-By managing all elements completely independently without geometric symmetry constraints, the proposed deterministic analytical framework demonstrates a **$3.10$ dB improvement** over the verified reference pattern cuts, proving that exact second-order analytical derivatives can resolve dense, non-convex 2D landscapes far more effectively than global stochastic search heuristics.
+By optimizing all element positions independently without geometric symmetry constraints, the proposed deterministic analytical framework demonstrates a **$3.10$ dB improvement** over the verified reference pattern cuts. 
 
-Here is the physical layout and the resulting pattern for the verified 600-element configuration ($\nu = 60.0$), maintaining a highly focused main beam with a sharp beamwidth of approximately **$1.55^\circ$**:
+The resulting physical layout and the radiation pattern for the verified 600-element configuration ($\nu = 60.0$) are illustrated below, showcasing a highly focused main beam with a sharp half-power beamwidth of approximately **$1.55^\circ$**:
+
+![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
+
 
 ![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
