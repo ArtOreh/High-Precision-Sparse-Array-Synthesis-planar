@@ -40,3 +40,4 @@ By managing all elements completely independently without geometric symmetry con
 
 Here is the physical layout and the resulting pattern for the verified 600-element configuration ($\nu = 60.0$), maintaining a highly focused main beam with a sharp beamwidth of approximately **$1.55^\circ$**:
 
+![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
