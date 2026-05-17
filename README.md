@@ -36,12 +36,4 @@ To evaluate the optimization accuracy and structural synthesis capability of the
 The reference method utilizes a Modified Differential Evolution Algorithm (MDEA) under a rigid 15-fold rotational symmetry constraint ($M=15$) to artificially restrict the search space dimension. A discrepancy is observed between the reported text and the published graphics: while a peak sidelobe level (PSLL) of $-20.12$ dB is stated in the text, the corresponding radiation pattern cuts (Fig. 4b) exhibit localized 2D sidelobe peaks reaching approximately $-18.50$ dB. This indicates potential optimization stagnation or an insufficiently dense verification grid in the reference study.
 
 
-
-**NEED RECHECK**
-In contrast, the proposed hybrid 2D Newton-Raphson optimization framework operates with fully unconstrained, independent elements, managing 1200 degrees of freedom. Validated by an exhaustive independent brute-force 2D scan grid, the proposed method achieved a verified 2D peak SLL of **$-21.60$ dB**.
-
-By optimizing all element positions independently without geometric symmetry constraints, the proposed deterministic analytical framework demonstrates a **$3.10$ dB improvement** over the verified reference pattern cuts. 
-
-The resulting physical layout and the radiation pattern for the verified 600-element configuration ($\nu = 60.0$) are illustrated below, showcasing a highly focused main beam with a sharp half-power beamwidth of approximately **$1.55^\circ$**:
-
-![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
+**NEED DATA**
