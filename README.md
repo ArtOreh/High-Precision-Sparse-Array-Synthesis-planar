@@ -20,13 +20,15 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 
 
 
-| Elements ($N$) | Radius ($\nu$, in $\lambda$) | PSLL (dB) |
-| :--- | :--- | :--- |
-| **100** | $4.5$ | **-29.0 dB** |
-| **200** | $5.5$ | **-33.2 dB** |
-| **300** | $7.0$ | **-33.8 dB** |
-| **500** | $9.0$ | **-35.3 dB** |
-| **1000** | $12.5$ | **-37.0 dB** |
+
+| Elements ($N$) | Radius ($\nu$, in $\lambda$) | PSLL (dB) |  Link |
+| :---: | :---: | :---: | :--- |
+| **100** | $4.5$ | **-29.0 dB** | [results/plots/interference_plot_n=100_r=4.5.png](results/plots/interference_plot_n=100_r=4.5.png) |
+| **200** | $5.5$ | **-33.2 dB** | [results/plots/interference_plot_n=200_r=5.5.png](results/plots/interference_plot_n=200_r=5.5.png) |
+| **300** | $7.0$ | **-33.8 dB** | [results/plots/interference_plot_n=300_r=7.0.png](results/plots/interference_plot_n=300_r=7.0.png) |
+| **500** | $9.0$ | **-35.3 dB** | [results/plots/interference_plot_n=500_r=9.0.png](results/plots/interference_plot_n=500_r=9.0.png) |
+| **1000** | $12.5$ | **-37.0 dB** | [results/plots/interference_plot_n=1000_r=12.5.png](results/plots/interference_plot_n=1000_r=12.5.png) |
+
 
 ### State-of-the-Art Benchmarking (600 Elements, $\nu = 60.0$)
 
