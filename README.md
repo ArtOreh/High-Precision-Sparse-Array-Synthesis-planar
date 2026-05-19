@@ -30,20 +30,21 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 | **1000** | $12.5$ | **-37.0 dB** | [results/plots/interference_plot_n=1000_r=12.5.png](results/plots/interference_plot_n=1000_r=12.5.png) |
 
 
-###UWB Sparse Planar Array with 600 Elements and 5:1 Bandwidth ($\nu = 60.0$)
+## UWB Sparse Planar Array with 600 Elements and 5:1 Bandwidth ($\nu = 60.0$)
 
 To evaluate the optimization accuracy and structural synthesis capability of the proposed framework, a benchmarking experiment was conducted against a 600-element ultra-wideband (UWB) sparse circular planar array described by F. Liu et al. (2023) [DOI: 10.3390/electronics12234833] [article](https://www.mdpi.com/2079-9292/12/23/4833).
 
 
 The reference method utilizes a Modified Differential Evolution Algorithm (MDEA) under a rigid 15-fold rotational symmetry constraint ($M=15$) to artificially restrict the search space dimension. A discrepancy is observed between the reported text and the published graphics: while a peak sidelobe level (PSLL) of $-20.12$ dB is stated in the text, the corresponding radiation pattern cuts (Fig. 4b) exhibit localized 2D sidelobe peaks reaching approximately $-18.50$ dB. This indicates potential optimization stagnation or an insufficiently dense verification grid in the reference study.
 
-In contrast, the proposed continuous 2D Newton-Raphson optimization framework operates with fully unconstrained, independent elements, managing 1200 degrees of freedom. Validated by an exhaustive independent brute-force $1920 \times 1920$ 2D scan grid, the proposed method achieved a verified 2D peak SLL of **$-21.80$ dB**.
+In contrast, the proposed continuous 2D Newton-Raphson optimization framework operates with fully unconstrained, independent elements, managing 1200 degrees of freedom. Validated by an exhaustive independent brute-force $1920 \times 1920$ 2D scan grid, the proposed method achieved a verified 2D peak SLL of **$-21.80$ dB**. Furthermore, the optimized layout rigorously satisfies the strict physical minimum element spacing constraint of $d_{\min} = 2.5\lambda_H$.
+
 
 The resulting physical layout and the radiation pattern for the verified 600-element configuration ($\nu = 60.0$) are illustrated below, showcasing a highly focused main beam with a sharp half-power beamwidth of approximately **$1.55^\circ$**:
 
 
 ![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
 
-###2000-Element Square Kilometer Array (SKA) Operating over 70 MHz to 450 MHz ($\nu = 181.9$)
+## 2000-Element Square Kilometer Array (SKA) Operating over 70 MHz to 450 MHz ($\nu = 181.9$)
 
-###TEXT
+###TEXT###
