@@ -30,7 +30,7 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 | **1000** | $12.5$ | **-37.0 dB** | [results/plots/interference_plot_n=1000_r=12.5.png](results/plots/interference_plot_n=1000_r=12.5.png) |
 
 
-### State-of-the-Art Benchmarking (600 Elements, $\nu = 60.0$)
+###UWB Sparse Planar Array with 600 Elements and 5:1 Bandwidth ($\nu = 60.0$)
 
 To evaluate the optimization accuracy and structural synthesis capability of the proposed framework, a benchmarking experiment was conducted against a 600-element ultra-wideband (UWB) sparse circular planar array described by F. Liu et al. (2023) [DOI: 10.3390/electronics12234833] [article](https://www.mdpi.com/2079-9292/12/23/4833).
 
@@ -43,3 +43,7 @@ The resulting physical layout and the radiation pattern for the verified 600-ele
 
 
 ![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
+
+###2000-Element Square Kilometer Array (SKA) Operating over 70 MHz to 450 MHz ($\nu = 181.9$)
+
+###TEXT
