@@ -46,5 +46,9 @@ The resulting physical layout and the radiation pattern for the verified 600-ele
 ![Pattern for 600 elements](results/plots/interference_plot_n=600_r=60.0.png)
 
 ## 2000-Element Square Kilometer Array (SKA) Operating over 70 MHz to 450 MHz ($\nu = 181.9$)
+The reference method utilizes a Modified Differential Evolution Algorithm (MDEA) under a rigid 25-fold rotational symmetry constraint ($M=25$) to restrict the search space dimension, achieving a reported PSLL of $-19.46$ dB. In contrast, the proposed continuous 2D Newton-Raphson optimization framework operates with fully unconstrained, independent elements. Validated by an exhaustive independent brute-force $5820 \times 5820$ 2D scan grid, the proposed method achieved a verified 2D peak SLL of **$-25.04$ dB**, providing a definitive **$5.58$ dB** improvement over the reference study while maintaining a physical minimum inter-element spacing of $d_{\min}=3.21\lambda_H$.
 
-###TEXT###
+The resulting physical layout and the radiation pattern for the verified 2000-element configuration ($\nu = 181.9$) are illustrated below, showcasing a highly focused main beam with a sharp half-power beamwidth of approximately **$1.10^\circ$**:
+
+![Pattern for 2000 elements](results/plots/interference_plot_n=2000_r=181.9.png)
+
