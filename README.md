@@ -1,6 +1,6 @@
 # Continuous Sparse Planar Array Synthesis (Work in Progress)
 
-This repository contains the results of an ongoing research on 2D sparse antenna arrays. The source code is currently private until the paper is submitted.
+This repository contains the results of an ongoing research on 2D sparse antenna arrays. The source code is currently private until the paper is submitted. https://zenodo.org/records/20298078
 
 ## Key Features of the Results
 * **Continuous Coordinates:** Points are not restricted to a grid.
