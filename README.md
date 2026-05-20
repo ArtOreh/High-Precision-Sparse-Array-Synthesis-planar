@@ -9,9 +9,11 @@ This repository contains the results of an ongoing research on 2D sparse antenna
 
 ## Folder Structure
 
-* `results/` — Contains the output data.
-  * `coordinates/` — Text files with precise `[x, y]` coordinates.
-  * `plots/` — Array layouts and 2D pattern graphs. Note: Gray circles represent a safety zone of radius $d_{min}/2$ around each element to ensure physical spacing.
+* `optimizer_numba.py` — The core high-performance parallel array synthesis engine accelerated via Numba.
+* `results/` — Contains the validated framework synthesis output data.
+  * `coordinates/` — High-precision text files containing the final `[x, y]` radiator distributions.
+  * `plots/` — Synthesized geometric array layouts and verified 2D radiation pattern graphs. Note: Gray circles represent the element separation safety zone ($d_{\min}/2$) strictly preventing structural overlap.
+
 
 ## Benchmarks and Results
 
