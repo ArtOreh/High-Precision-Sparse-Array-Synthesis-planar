@@ -665,7 +665,7 @@ MAIN_BEAM_RADIUS = 0.81 / nu_val #0.61 / nu_val
 
 def main():
     print("--- LAUNCHING 2D OPTIMIZATION PASS ---")
-    stage1_iters = 1_000
+    stage1_iters = 100_000
     lr_start = 1e-2
     time_start = time()
 
