@@ -24,13 +24,15 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 
 
 
-| Elements ($N$) | Radius ($\nu, \lambda$) | PSLL (dB) | Verification Plot | Coordinates File |
-| :---: | :---: | :---: | :---: | :---: |
-| **100** | $4.5$ | **-29.0** | [[View Plot]](results/plots/interference_plot_n=100_r=4.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=100_r=4.5lam.txt) |
-| **200** | $5.5$ | **-33.2** | [[View Plot]](results/plots/interference_plot_n=200_r=5.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=200_r=5.5lam.txt) |
-| **300** | $7.0$ | **-33.8** | [[View Plot]](results/plots/interference_plot_n=300_r=7.0.png) | [[TXT]](results/coordinates/coordinates_2d_N=300_r=7.0lam.txt) |
-| **500** | $9.0$ | **-35.3** | [[View Plot]](results/plots/interference_plot_n=500_r=9.0.png) | [[TXT]](results/coordinates/coordinates_2d_N=500_r=9.0lam.txt) |
-| **1000** | $12.5$ | **-37.0** | [[View Plot]](results/plots/interference_plot_n=1000_r=12.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=1000_r=12.5lam.txt) |
+
+| Elements ($N$) | Radius ($\nu, \lambda$) | PSLL (dB) | HPBW (-3 dB) | Verification Plot | Coordinates File |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| **100** | $4.5$ | **-29.0** | **8.3°** | [[View Plot]](results/plots/interference_plot_n=100_r=4.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=100_r=4.5lam.txt) |5
+| **200** | $5.5$ | **-33.2** | **6.5°** | [[View Plot]](results/plots/interference_plot_n=200_r=5.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=200_r=5.5lam.txt) |
+| **300** | $7.0$ | **-33.8** | **5.0°** | [[View Plot]](results/plots/interference_plot_n=300_r=7.0.png) | [[TXT]](results/coordinates/coordinates_2d_N=300_r=7.0lam.txt) |
+| **500** | $9.0$ | **-35.3** | **3.9°** | [[View Plot]](results/plots/interference_plot_n=500_r=9.0.png) | [[TXT]](results/coordinates/coordinates_2d_N=500_r=9.0lam.txt) |
+| **1000** | $12.5$ | **-37.0** | **2.7°** | [[View Plot]](results/plots/interference_plot_n=1000_r=12.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=1000_r=12.5lam.txt) |
+
 
 
 
