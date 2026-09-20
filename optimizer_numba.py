@@ -13,7 +13,7 @@ def visualize(full_coords, k_val, MAIN_BEAM_RADIUS, MIN_DIST):
     """Generates the array layout plot on the left and the high-resolution SLL radiation pattern map on the right."""
     
     # Calculate adaptive grid size based on aperture frequency bounds
-    grid_size = int(k_val * 32)
+    grid_size = max(1920, int(k_val * 32))
     print(f"[SPECTRAL CONTROL] Frequency nu={k_val:.4f}. Computation grid dimensions: {grid_size}x{grid_size}")
     
     # Generate 2D space variables (u, v)
