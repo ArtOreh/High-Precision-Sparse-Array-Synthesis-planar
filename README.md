@@ -10,6 +10,7 @@ This repository contains the results of an ongoing research on 2D sparse antenna
 ## Folder Structure
 
 * `optimizer_numba.py` — The core high-performance parallel array synthesis engine accelerated via Numba.
+* `requirements.txt` — Specifies the package dependency baseline required for executing the high-performance computing pipeline.
 * `results/` — Contains the validated framework synthesis output data.
   * `coordinates/` — High-precision text files containing the final `[x, y]` radiator distributions.
   * `plots/` — Synthesized geometric array layouts and verified 2D radiation pattern graphs. Note: Gray circles represent the element separation safety zone ($d_{\min}/2$) strictly preventing structural overlap.
