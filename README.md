@@ -24,13 +24,14 @@ All results strictly maintain a physical minimum element spacing of $d_{min} = 0
 
 
 
-| Elements ($N$) | Radius ($\nu$, in $\lambda$) | PSLL (dB) |  Link |
-| :---: | :---: | :---: | :--- |
-| **100** | $4.5$ | **-29.0 dB** | [results/plots/interference_plot_n=100_r=4.5.png](results/plots/interference_plot_n=100_r=4.5.png) |
-| **200** | $5.5$ | **-33.2 dB** | [results/plots/interference_plot_n=200_r=5.5.png](results/plots/interference_plot_n=200_r=5.5.png) |
-| **300** | $7.0$ | **-33.8 dB** | [results/plots/interference_plot_n=300_r=7.0.png](results/plots/interference_plot_n=300_r=7.0.png) |
-| **500** | $9.0$ | **-35.3 dB** | [results/plots/interference_plot_n=500_r=9.0.png](results/plots/interference_plot_n=500_r=9.0.png) |
-| **1000** | $12.5$ | **-37.0 dB** | [results/plots/interference_plot_n=1000_r=12.5.png](results/plots/interference_plot_n=1000_r=12.5.png) |
+| Elements ($N$) | Radius ($\nu, \lambda$) | PSLL (dB) | Verification Plot | Coordinates File |
+| :---: | :---: | :---: | :---: | :---: |
+| **100** | $4.5$ | **-29.0** | [[View Plot]](results/plots/interference_plot_n=100_r=4.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=100_r=4.5lam.txt) |
+| **200** | $5.5$ | **-33.2** | [[View Plot]](results/plots/interference_plot_n=200_r=5.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=200_r=5.5lam.txt) |
+| **300** | $7.0$ | **-33.8** | [[View Plot]](results/plots/interference_plot_n=300_r=7.0.png) | [[TXT]](results/coordinates/coordinates_2d_N=300_r=7.0lam.txt) |
+| **500** | $9.0$ | **-35.3** | [[View Plot]](results/plots/interference_plot_n=500_r=9.0.png) | [[TXT]](results/coordinates/coordinates_2d_N=500_r=9.0lam.txt) |
+| **1000** | $12.5$ | **-37.0** | [[View Plot]](results/plots/interference_plot_n=1000_r=12.5.png) | [[TXT]](results/coordinates/coordinates_2d_N=1000_r=12.5lam.txt) |
+
 
 
 ## UWB Sparse Planar Array with 600 Elements and 5:1 Bandwidth ($\nu = 60.0$, minimum element spacing constraint of $d_{\min} = 2.5\lambda_H$) 
