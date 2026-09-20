@@ -253,7 +253,11 @@ def find_local_max_on_circle_newton(phi_start, radius, full_coords, k_val):
 
         C, S = 0.0, 0.0
         Cu, Su, Cv, Sv = 0.0, 0.0, 0.0, 0.0
+
         Cuu, Suu = 0.0, 0.0
+        Cvv, Svv = 0.0, 0.0
+        Cuv, Suv = 0.0, 0.0
+
 
         # Accumulate quadrature fields over all array radiators
         for i in range(num_elements):
@@ -273,11 +277,19 @@ def find_local_max_on_circle_newton(phi_start, radius, full_coords, k_val):
             Sv +=  tp_nu * y * cos_p
 
             # Calculate only raw uu-components to optimize execution profile
-            cos_p_sq = tp_nu_sq * cos_p
-            sin_p_sq = tp_nu_sq * sin_p
+            Cuu += -x * x * cos_p
+            Suu += -x * x * sin_p
+            Cvv += -y * y * cos_p
+            Svv += -y * y * sin_p
+            Cuv += -x * y * cos_p
+            Suv += -x * y * sin_p
 
-            Cuu += -x * x * cos_p_sq
-            Suu += -x * x * sin_p_sq
+        Cuu *= tp_nu_sq
+        Suu *= tp_nu_sq
+        Cvv *= tp_nu_sq
+        Svv *= tp_nu_sq
+        Cuv *= tp_nu_sq
+        Suv *= tp_nu_sq
 
         # Formulate core partial derivatives of field intensity
         dI_du = 2.0 * (C * Cu + S * Su)
@@ -285,17 +297,26 @@ def find_local_max_on_circle_newton(phi_start, radius, full_coords, k_val):
 
         # Synthesize remaining Hessian elements via directional vector transformations
         H11 = 2.0 * (Cu**2 + Su**2 + C * Cuu + S * Suu)
-        H22 = 2.0 * (Cv**2 + Sv**2 + (v**2 / (u**2 + 1e-20)) * (C * Cuu + S * Suu))
-        H12 = 2.0 * (Cu * Cv + Su * Sv + (v / (u + 1e-20)) * (C * Cuu + S * Suu))
+        H22 = 2.0 * (Cv**2 + Sv**2 + C * Cvv + S * Svv)
+        H12 = 2.0 * (Cu * Cv + Su * Sv + C * Cuv + S * Suv)
+
 
         # Evaluate first derivative: dI / dphi (Angular gradient)
         dI_dphi = u * dI_dv - v * dI_du
 
         # Evaluate second derivative: d^2I / dphi^2 (Angular curvature)
-        d2I_dphi2 = H11 * (v**2) - 2.0 * H12 * u * v + H22 * (u**2) - (u * dI_du + v * dI_dv)
-
-        # Execute 1D angular Newton-Raphson correction update step
-        curr_phi -= dI_dphi / d2I_dphi2
+        # Evaluate second derivative: d^2I / dphi^2
+        tHt = H11 * (v**2) - 2.0 * H12 * u * v + H22 * (u**2)
+        grad_dot_p = u * dI_du + v * dI_dv
+        d2I_dphi2 = tHt - grad_dot_p
+        
+        # Robust fallback: if curvature vanishes (inflection point or flat plateau), 
+        # execute a safe fixed-step gradient ascent update to bypass stagnation
+        if abs(d2I_dphi2) < 1e-10:
+            curr_phi += 0.01 * np.sign(dI_dphi)
+        else:
+            # Standard 1D angular Newton-Raphson correction update step
+            curr_phi -= dI_dphi / d2I_dphi2
 
     # Map terminal tracking state back to cartesian spectrum coordinates
     final_u = radius * np.cos(curr_phi)
