@@ -14,6 +14,12 @@ This repository contains the results of an ongoing research on 2D sparse antenna
 * `results/` — Contains the validated framework synthesis output data.
   * `coordinates/` — High-precision text files containing the final `[x, y]` radiator distributions.
   * `plots/` — Synthesized geometric array layouts and verified 2D radiation pattern graphs. Note: Gray circles represent the element separation safety zone ($d_{\min}/2$) strictly preventing structural overlap.
+* `MOM/` — Full-wave electromagnetic verification data for the 77-element circular patch array synthesized via Method of Moments (MoM).
+  * `3d_77.pdf` — 3D radiation pattern visualization within a ±60° spatial sector.
+  * `coordinates_2d_N=77_r=4.0lam_center.txt` — Plain text database of the final optimized \([x, y]\) radiator spatial coordinates.
+  * `mom_only_plot_N=77_r=-4.0_limit=0.87.png` — Computed 2D planar radiation intensity plot mapping the -23.5 dB Max SLL threshold.
+  * `mom_radiation_data_77.mat` — Raw MATLAB data matrix containing the complete full-wave physical simulation fields.
+  * `scheme_emitters_77.png` — Two-dimensional structural layout scheme illustrating the spatial distribution of physical microstrip patches.
 
 
 ## Benchmarks and Results
@@ -57,4 +63,34 @@ The reference method utilizes a Modified Differential Evolution Algorithm (MDEA)
 The resulting physical layout and the radiation pattern for the verified 2000-element configuration ($\nu = 181.9$) are illustrated below, showcasing a highly focused main beam with a sharp half-power beamwidth of approximately **$1.10^\circ$**:
 
 ![Pattern for 2000 elements](results/plots/interference_plot_n=2000_r=181.9.png)
+
+
+## Full-Wave EM Verification via Method of Moments (MoM)
+
+Electromagnetic validation of the synthesized planar array configurations was performed in MATLAB using the Antenna Toolbox. The framework replaces the ideal isotropic radiator assumption with a realistic microstrip circular patch element printed on a grounded dielectric substrate.
+
+### Substrate and Element Geometry Specifications
+* **Substrate Material:** FR4 ($\epsilon_r = 4.80$, thickness $h = 1.140 mm$)
+* **Radiator Type:** Microstrip circular patch (Radius $R = 16.82 mm$, Disc Diameter $= 33.64 mm$)
+* **Coaxial Feed Point Offset:** $X = -8.41 mm, Y = 0.00 mm$ (relative to the patch center)
+* **Array Ground Plane:** Circular board configuration (Radius $R_{board} = 429.32 mm$, Board Diameter $= 858.64 mm$)
+
+### Analytical Pattern Approximation
+To maintain the high-performance deterministic gradient execution of the exact Hessian tensor solver within the 60^\circ observation sector, the isolated element's radiation pattern was approximated using a 4th-order continuous 2D cushion polynomial:
+
+$I_{element}(u, v) = 1 - \alpha_1 u^2 - \alpha_2 u^4 - \beta_1 v^2 - \beta_2 v^4 + \gamma_1 u^2 v^2 + \gamma_2 u^4 v^4$
+
+The optimized structural parameters hardcoded into the high-precision `optimizer_numba.py` tracking loop are defined as follows:
+* $\alpha_1 = 0.5298, \alpha_2 = 0.0360$
+* $\beta_1 = 0.4953, \beta_2 = 0.0285$
+* $\gamma_1 = 0.0586, \gamma_2 = -0.3532$
+
+### Verification Plots and Synthesis Results
+
+| Array Topology and Element Layout | Synthesized 2D Radiation Pattern |
+|:---:|:---:|
+| <img src="MOM/scheme_emitters_77.png" width="100%"> | <img src="MOM/mom_only_plot_N=77_r=4.0_limit=0.87.png" width="73%"> |
+
+#### Full 3D Radiation Pattern Distribution $\pm60^\circ$ Sector
+<img src="MOM/3d_77.png" width="100%">
 
