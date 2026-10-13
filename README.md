@@ -76,7 +76,7 @@ Electromagnetic validation of the synthesized planar array configurations was pe
 * **Array Ground Plane:** Circular board configuration (Radius $R_{board} = 429.32 mm$, Board Diameter $= 858.64 mm$)
 
 ### Analytical Pattern Approximation
-To maintain the high-performance deterministic gradient execution of the exact Hessian tensor solver within the 60^\circ observation sector, the isolated element's radiation pattern was approximated using a 4th-order continuous 2D cushion polynomial:
+To maintain the high-performance deterministic gradient execution of the exact Hessian tensor solver within the $60^\circ$ observation sector, the isolated element's radiation pattern was approximated using a 4th-order continuous 2D cushion polynomial:
 
 $I_{element}(u, v) = 1 - \alpha_1 u^2 - \alpha_2 u^4 - \beta_1 v^2 - \beta_2 v^4 + \gamma_1 u^2 v^2 + \gamma_2 u^4 v^4$
 
