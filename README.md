@@ -67,13 +67,13 @@ The resulting physical layout and the radiation pattern for the verified 2000-el
 
 ## Full-Wave EM Verification via Method of Moments (MoM)
 
-Electromagnetic validation of the synthesized planar array configurations was performed in MATLAB using the Antenna Toolbox. The framework replaces the ideal isotropic radiator assumption with a realistic microstrip circular patch element printed on a grounded dielectric substrate.
+Electromagnetic validation of the synthesized planar array configurations was performed in MATLAB using the Antenna Toolbox. The framework replaces the ideal isotropic radiator assumption with a microstrip circular patch element printed.
 
 ### Substrate and Element Geometry Specifications
-* **Substrate Material:** FR4 ($\epsilon_r = 4.80$, thickness $h = 1.140 mm$)
-* **Radiator Type:** Microstrip circular patch (Radius $R = 16.82 mm$, Disc Diameter $= 33.64 mm$)
-* **Coaxial Feed Point Offset:** $X = -8.41 mm, Y = 0.00 mm$ (relative to the patch center)
-* **Array Ground Plane:** Circular board configuration (Radius $R_{board} = 429.32 mm$, Board Diameter $= 858.64 mm$)
+* **Substrate Material:** AIR ($\epsilon_r = 1.0$, thickness $h = 2.0 mm$)
+* **Radiator Type:** Microstrip circular patch (Radius $R = 35.20 mm$, Disc Diameter $= 70.40 mm$)
+* **Coaxial Feed Point Offset:** $X = 10.70 mm, Y = 0.00 mm$ (relative to the patch center)
+* **Array Ground Plane:** Circular board configuration (Radius $R_{board} = 672.26 mm$, Board Diameter $= 1344.52 mm$)
 
 ### Analytical Pattern Approximation
 To maintain the high-performance deterministic gradient execution of the exact Hessian tensor solver within the $60^\circ$ observation sector, the isolated element's radiation pattern was approximated using a 4th-order continuous 2D cushion polynomial:
@@ -81,16 +81,13 @@ To maintain the high-performance deterministic gradient execution of the exact H
 $I_{element}(u, v) = 1 - \alpha_1 u^2 - \alpha_2 u^4 - \beta_1 v^2 - \beta_2 v^4 + \gamma_1 u^2 v^2 + \gamma_2 u^4 v^4$
 
 The optimized structural parameters hardcoded into the high-precision `optimizer_numba.py` tracking loop are defined as follows:
-* $\alpha_1 = 0.5298, \alpha_2 = 0.0360$
-* $\beta_1 = 0.4953, \beta_2 = 0.0285$
-* $\gamma_1 = 0.0586, \gamma_2 = -0.3532$
+* $\alpha_1 = 1.5122, \alpha_2 = -0.6256$
+* $\beta_1 = 1.1982, \beta_2 = -0.3297$
+* $\gamma_1 = 1.7905, \gamma_2 = -2.0583$
 
 ### Verification Plots and Synthesis Results
 
 | Array Topology and Element Layout | Synthesized 2D Radiation Pattern |
 |:---:|:---:|
-| <img src="MOM/scheme_emitters_77.png" width="100%"> | <img src="MOM/mom_only_plot_N=77_r=4.0_limit=0.87.png" width="73%"> |
-
-#### Full 3D Radiation Pattern Distribution $\pm60^\circ$ Sector
-<img src="MOM/3d_77.png" width="100%">
+| <img src="MOM/scheme_emitters_77_air.png" width="100%"> | <img src="MOM/mom_only_plot_N=77_r=5.0_limit=0.87.png" width="73%"> |
 
