@@ -88,5 +88,5 @@ The optimized structural parameters hardcoded into the high-precision `optimizer
 
 | Array Topology and Element Layout | Synthesized 2D Radiation Pattern |
 |:---:|:---:|
-| <img src="MOM/scheme_emitters_77_air.png" width="100%"> | <img src="MOM/mom_only_plot_N=77_r=5.0_limit=0.87.png" width="73%"> |
+| <img src="MOM/scheme_emitters_77_air.png" width="100%"> | <img src="MOM/mom_only_plot_N=77_r=5.0_limit=0.87.png" width="65%"> |
 
