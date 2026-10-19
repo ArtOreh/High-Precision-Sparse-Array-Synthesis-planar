@@ -15,11 +15,10 @@ This repository contains the results of an ongoing research on 2D sparse antenna
   * `coordinates/` — High-precision text files containing the final `[x, y]` radiator distributions.
   * `plots/` — Synthesized geometric array layouts and verified 2D radiation pattern graphs. Note: Gray circles represent the element separation safety zone ($d_{\min}/2$) strictly preventing structural overlap.
 * `MOM/` — Full-wave electromagnetic verification data for the 77-element circular patch array synthesized via Method of Moments (MoM).
-  * `3d_77.png` — 3D radiation pattern visualization within a ±60° spatial sector.
-  * `coordinates_2d_N=77_r=4.0lam_center.txt` — Plain text database of the final optimized \([x, y]\) radiator spatial coordinates.
-  * `mom_only_plot_N=77_r=4.0_limit=0.87.png` — Computed 2D planar radiation intensity plot mapping the -23.5 dB Max SLL threshold.
-  * `mom_radiation_data_77.mat` — Raw MATLAB data matrix containing the complete full-wave physical simulation fields.
-  * `scheme_emitters_77.png` — Two-dimensional structural layout scheme illustrating the spatial distribution of physical microstrip patches.
+  * `coordinates_2d_N=77_r=5.0lam0.85.txt` — Plain text database of the final optimized \([x, y]\) radiator spatial coordinates.
+  * `mom_only_plot_N=77_r=5.0_limit=0.87.png` — Computed 2D planar radiation intensity plot mapping the -23.5 dB Max SLL threshold.
+  * `mom_radiation_data_77_air.mat` — Raw MATLAB data matrix containing the complete full-wave physical simulation fields.
+  * `scheme_emitters_77_air.png` — Two-dimensional structural layout scheme illustrating the spatial distribution of physical microstrip patches.
 
 
 ## Benchmarks and Results
